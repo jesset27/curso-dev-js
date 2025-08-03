@@ -1,0 +1,32 @@
+Atividade CMD - Estrutura de Projeto Responsivo
+cd Desktop
+mkdir projeto_responsivo
+cd projeto_responsivo
+md public
+md src
+md docs
+cd public
+md html
+md css
+md js
+md media
+cd media
+dir
+cd ..
+cd html
+echo > home.html Projeto Responsivo
+cd ..
+cd css
+echo > theme.css body { margin: 0; padding: 0; background-color: lightgray; }
+cd ../media
+md imagens
+md fontes
+copy theme.css U:\Users\52005606839\Desktop\projeto_responsivo\docs
+cd ../js
+echo > responsivo.js console.log("Site Responsivo pronto!");
+echo > utils.js console.log("Utilitários carregados!");
+rename utils.js helpers.js
+cd ..
+tree
+cd ../docs & del theme.css
+cd .. & cd public/html & notepad home.html
