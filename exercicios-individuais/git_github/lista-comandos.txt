@@ -1,0 +1,7 @@
+git init
+
+git config --global user.name "jesset27"
+git config --global user.email "jessewillian0@gmail.com"
+git commit -m "Mensagem do commit"
+git push origin main
+git clone https://github.com/jesset27/curso-dev-js
