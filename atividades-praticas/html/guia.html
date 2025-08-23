@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Tags HTML</title>
+</head>
+
+<body>
+    <header>
+        <h1>Guia Rápido de Tags HTML</h1>
+    </header>
+    <hr>
+    <h2>Títulos (h1, h2, ... h6)</h2>
+    <p>Usados para definir hierarquias e importâncias dos títulos na página.</p>
+    <h1>Título de nível 1 -> o mais importante</h1>
+    <h2>Título de nível 2</h2>
+    <h3>Título de nível 3</h3>
+    <h4>Título de nível 4</h4>
+    <h5>Título de nível 5</h5>
+    <h6>Título de nível 6 -> o menos importante</h6>
+    <hr>
+    <h2>Parágrafos e Formatação</h2>
+    <p>a tag P vai ser utilizada para blocos de texto</p>
+    <p>
+        Informação em <strong>destaque</strong> => semântico
+        <br>
+        Informação em <b>destaque</b> => apenas negrito
+        <br>
+        Informação em <em>ênfase</em> => semântico
+        <br>
+        Informação em <i>ênfase</i> => apenas itálico
+    </p>
+    <h2>Lista (UL, OL,DL, LI)</h2>
+    <h3>Lista Desordenada UL</h3>
+    <ul>
+        <li>Café</li>
+        <li>Leite</li>
+        <li>Pão</li>
+    </ul>
+    <h3>Lista Ordenada</h3>
+    <ol>
+        <li>Café</li>
+        <li>Leite</li>
+        <li>Pão</li>
+    </ol>
+    <h3>Lista de Definição</h3>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de Marcação</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de Estilo</dd>
+    </dl>
+    <hr>
+    <h2>Links</h2>
+    <p>Link para acessar outras páginas ou recursos</p>
+    <a href="https://www.google.com/">Acessar o Google</a>
+    <br>
+    <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Acessar o Google</a>
+    <hr>
+    <h2>Imagens</h2>
+    <p>Tag IMG e FIGURE para utilização de imagens</p>
+    <img src="https://picsum.photos/300/200" alt="Imagem de exemplo de 300x200 pixels">
+    <figure>
+        <img src="https://picsum.photos/300/200" alt="Imagem de exemplo de 300x200 pixels">
+        <figcaption>Imagem de exemplo de 300x200 pixels</figcaption>
+    </figure>
+    <hr>
+    <h2>Tabela</h2>
+    <p>Utilizadas para organizar o conteudo em linhas e colunas</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Café</td>
+                <td>1</td>
+                <td>R$ 30,00</td>
+            </tr>
+            <tr>
+                <td>Arroz</td>
+                <td>1</td>
+                <td>R$ 18,00</td>
+            </tr>
+            <tr>
+                <td>Feijão</td>
+                <td>1</td>
+                <td>R$ 5,00</td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total</td>
+                    <td>R$ 43,00</td>
+                </tr>
+            </tfoot>
+        </tbody>
+    </table>
+    <hr>
+    <h2>Div</h2>
+    <p>Divisórias no HTMl</p>
+    <div>
+        <p>Texto dentro de uma DIV</p>
+    </div>
+    <h2>Formulários e Inputs</h2>
+    <p>Utilizar para coletar dados de usuários</p>
+    <form action="" method="post">
+        <label for="nome">Nome:</label>
+        <br>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu Nome" required>
+        <br></br>
+        <label for="email">Email:</label>
+        <br>
+        <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+        <br></br>
+        <label for="senha">Senha:</label>
+        <br>
+        <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+        <br></br>
+        <label for="idade">Idade:</label>
+        <br>
+        <input type="number" name="idade" id="idade" placeholder="Digite sua Idade">
+        <br></br>
+        <label for="pais">País:</label>
+        <br>
+        <select name="pais" id="pais">
+            <option value="br">Brasil</option>
+            <option value="us">Estados Unidos</option>
+            <option value="jp">Japão</option>
+        </select>
+        <br><br>
+        <label for="msg">Mensagem:</label>
+        <br>
+        <textarea name="msg" id="" placeholder="Digite sua Mensagem Aqui"></textarea>
+        <br><br>
+        <label for="termos">Aceito os Termos</label>
+        <br>
+        <input type="checkbox" name="termos" id="termos">
+        <a href="termos.pdf" target="_blank" rel="noopener noreferrer">Ver Termos</a>
+        <br><br>
+        <button type="submit">Enviar Dados</button>
+
+    </form>
+</body>
+
+</html>
