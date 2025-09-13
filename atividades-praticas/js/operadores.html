@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores JS</title>
+    <style>
+        * {
+            background-color: rgb(55, 65, 73);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Aperte F12 para ver o resultado!</p>
+    <script>
+        //Variaveis
+        var exemploVar = "Jessé";
+        var exemploVar = "Willian";
+        console.log(exemploVar);
+
+        let exemploLet = "Prudente";
+        exemploLet = 'Regente';
+        console.log(exemploLet);
+        let exemploLet2 = "2222";
+
+        const exemploConst = 70;
+
+        // COMENTARIO EM UMA LINHA
+
+        /* 
+        COMENTARIO EM MAIS LINHAS
+        */
+        const nome = "Jessé";
+        const sobreNome = 'Willian';
+        const multiplasLinhas = `
+        primeira linha
+        segunda linha
+        terceira linha`;
+        console.log(nome, sobreNome);
+        console.log(nome, "-", sobreNome);
+        console.log(nome + "-" + sobreNome);
+        console.log(`${nome}-${sobreNome}`);
+
+        // NUMBER (interios e decimais)
+        const idade = 18;
+        const altura = 1.83;
+        const temperatura = -10;
+
+        // BOOLEAN (true ou false)
+        const ativo = true;
+        const desativado = false;
+        const maiorIdade = idade > 18;
+        console.log(maiorIdade);
+
+        // null e undefined
+        const valorNulo = null;
+        const valorIndefinido = undefined;
+
+        // OPERADORES ARITIMÉTICOS
+        // + - * / % ** ++ --
+        //PEMDAS
+        const a = 15;
+        const b = 5;
+        console.log(a + b);
+        console.log(a - b);
+        console.log(a * b);
+        console.log(a / b);
+        console.log(a % b)
+        console.log(a ** b);
+
+        console.log((a + b) / 4)
+
+        let contador = 10;
+        console.log(contador--);
+        console.log(contador);
+        console.log(--contador);
+
+        //Atribuição
+        let num = 10;
+        num += 5;
+        console.log(num);
+
+        num -= 3;
+        console.log(num);
+
+        num /= 4;
+        console.log(num);
+
+        //OPERADORES DE COMPARAÇÃO
+
+        const x = 5;
+        const y = '5';
+        const z = 1;
+
+        console.log(x == y);
+        console.log(x === y);
+
+        // OPERADORES LOGIGOS
+        //! NOT, || OR, && AND
+
+
+        const temIdade = true;
+        const temCarteira = true;
+        const temDinheiro = false;
+
+        console.log(!temIdade);
+        console.log(temIdade && temCarteira);
+        console.log(temIdade && temCarteira && temDinheiro);
+        console.log(temIdade || temCarteira || temDinheiro);
+
+        // CONVERSÕES DE TIPO
+        //CONVERSÕES IMPICITAS
+        console.log("5" + 2);
+        console.log("5" - 2);
+        console.log("5" * 2);
+
+        // CONVERSÕES EXPLICITAS
+
+        //STRING -> NUMBER
+        const textNumero = "42.7";
+        console.log(Number(textNumero));
+        console.log(parseInt(textNumero));
+        console.log(parseFloat('42px'));
+
+        // Number -> String 
+        const numero = 123.1;
+        console.log(String(numero));
+        console.log(numero.toString());
+
+        //Bool
+        console.log(Boolean(0));
+        console.log(Boolean(1));
+        console.log(Boolean(""));
+        console.log(Boolean("Jessé"));
+
+        const numero1 = 1;
+        const string1 = "Jessé";
+
+        console.log(typeof numero1);
+        console.log(typeof string1);
+
+
+    </script>
+</body>
+
+</html>
