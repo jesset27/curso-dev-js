@@ -25,7 +25,24 @@
             console.log(numero1 / numero2);
             console.log(numero1 * numero2);
         }
-        exercicio1();
+        function exercicio2() {
+            let numero1 = Number(prompt("Digite o Primeiro Número:"));
+            console.log(`Número antecessor é ${numero1 - 1} e número sucessor é ${numero1 + 1}`);
+        }
+        function exercicio6() {
+            let valor = parseFloat(prompt("Digite o seu valor em reais por favor: "));
+            console.log("Dolares: " + valor * 5.35);
+        }
+        function exercicio10() {
+            let peso = Number(prompt("Digite o seu peso (kg):"));
+            let alturaCm = Number(prompt("Digite sua altura em centímetros:"));
+            let altura = alturaCm / 100; 
+
+            let imc = peso / (altura * altura); 
+            console.log("Seu IMC é:", imc.toFixed(2));
+        }
+
+        exercicio10()
     </script>
 </body>
 
