@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de repetições</title>
+</head>
+
+<body>
+    <p>F12 para visualizar</p>
+    <script>
+        const nome = ['Lucas', 'Maria', 'José', 'Ana', 'Paulo'];
+        const numeros = [10, 20, 30, 40, 50];
+        const alunos = [
+            { nome: "Lucas", nota: 9 },
+            { nome: "Maria", nota: 10 },
+            { nome: "Pedro", nota: 8.5 },
+        ];
+
+        // for (variavel, condicao, incremento)
+        for (let i = 0; i <= 10; i++){
+            console.log(i)
+        }
+
+        for (let i = 0; i < alunos.length; i++){
+            console.log(alunos[i]);
+        }
+
+        let x = 1;
+
+        while (x <= 10){
+            console.log(x);
+            x++;
+            if (x === 4){
+                continue;
+            }
+            if (x === 5){
+                break;
+            }
+        }
+
+        // do{
+        //     console.log(x);
+        //     x++;
+        // } while(x <= 10);
+
+        nome.forEach(function(nome) {
+            console.log(nome);
+        });
+        alunos.forEach(function(aluno){
+            console.log(aluno.nota);
+        });
+
+        // MAP
+        const novoArray = [];
+        for (let i = 0; i < numeros.length; i++){
+            novoArray.push(numeros[i]*2);
+        }
+        console.log(novoArray);
+
+        const novoArray2 = numeros.map(function(numero){
+            return numero * 2;
+        })
+    </script>
+</body>
+
+</html>
