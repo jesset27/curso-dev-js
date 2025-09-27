@@ -9,6 +9,7 @@
         * {
             background-color: rgb(55, 65, 73);
             color: white;
+            font-family: Arial, sans-serif;
         }
     </style>
 </head>
@@ -16,33 +17,87 @@
 <body>
     <p>Aperte F12 para ver o resultado</p>
     <script>
+        // 1 - Operações básicas
         function exercicio1() {
-            //operadores aritiméticos basicos + - / *
             const numero1 = Number(prompt("Digite o primeiro número"));
             const numero2 = Number(prompt("Digite o segundo número"));
-            console.log(numero1 + numero2);
-            console.log(numero1 - numero2);
-            console.log(numero1 / numero2);
-            console.log(numero1 * numero2);
+            console.log("Soma:", numero1 + numero2);
+            console.log("Subtração:", numero1 - numero2);
+            console.log("Divisão:", numero1 / numero2);
+            console.log("Multiplicação:", numero1 * numero2);
         }
+
+        // 2 - Sucessor e antecessor
         function exercicio2() {
             let numero1 = Number(prompt("Digite o Primeiro Número:"));
             console.log(`Número antecessor é ${numero1 - 1} e número sucessor é ${numero1 + 1}`);
         }
+
+        // 3 - Dobro, triplo e raiz quadrada
+        function exercicio3() {
+            let numero = Number(prompt("Digite um número:"));
+            console.log("Dobro:", numero * 2);
+            console.log("Triplo:", numero * 3);
+            console.log("Raiz quadrada:", Math.sqrt(numero).toFixed(2));
+        }
+
+        // 4 - Média de 3 notas
+        function exercicio4() {
+            let n1 = Number(prompt("Digite a primeira nota:"));
+            let n2 = Number(prompt("Digite a segunda nota:"));
+            let n3 = Number(prompt("Digite a terceira nota:"));
+            let media = (n1 + n2 + n3) / 3;
+            console.log("A média do aluno é:", media.toFixed(2));
+        }
+
+        // 5 - Converter metros em cm e mm
+        function exercicio5() {
+            let metros = Number(prompt("Digite a quantidade em metros:"));
+            console.log("Centímetros:", metros * 100);
+            console.log("Milímetros:", metros * 1000);
+        }
+
+        // 6 - Conversor de moeda
         function exercicio6() {
             let valor = parseFloat(prompt("Digite o seu valor em reais por favor: "));
-            console.log("Dolares: " + valor * 5.35);
+            console.log("Dólares: " + (valor / 5.35).toFixed(2));
         }
+
+        // 7 - Preço com desconto
+        function exercicio7() {
+            let preco = Number(prompt("Digite o preço do produto:"));
+            let desconto = preco - (preco * 0.05);
+            console.log("Preço com 5% de desconto:", desconto.toFixed(2));
+        }
+
+        // 8 - Verifica se é maior de idade
+        function exercicio8() {
+            let idade = Number(prompt("Digite sua idade:"));
+            console.log("Maior de idade?", idade >= 18);
+        }
+
+        // 9 - Área da parede e tinta necessária
+        function exercicio9() {
+            let largura = Number(prompt("Digite a largura da parede em metros:"));
+            let altura = Number(prompt("Digite a altura da parede em metros:"));
+            let area = largura * altura;
+            let tinta = area / 2; // 1 litro = 2m²
+            console.log("Área da parede:", area + " m²");
+            console.log("Quantidade de tinta necessária:", tinta.toFixed(2), "litros");
+        }
+
+        // 10 - Cálculo de IMC
         function exercicio10() {
             let peso = Number(prompt("Digite o seu peso (kg):"));
             let alturaCm = Number(prompt("Digite sua altura em centímetros:"));
-            let altura = alturaCm / 100; 
+            let altura = alturaCm / 100;
 
-            let imc = peso / (altura * altura); 
+            let imc = peso / (altura * altura);
             console.log("Seu IMC é:", imc.toFixed(2));
         }
 
-        exercicio10()
+        // Chamando um exercício de exemplo:
+        exercicio3();
     </script>
 </body>
 
