@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays e Objetos</title>
+</head>
+
+<body>
+    <p>F12 para exibir</p>
+    <script>
+        function exe001() {
+            const playlist = ["Pra ser sincero", "O papa é Pop", "Infinita Highway"];
+            console.log(playlist[0]);
+            playlist.push("Radio Pirata");
+            console.log(playlist);
+            playlist.pop(playlist.length - 1);
+            console.log(playlist);
+            console.log(playlist.length)
+        }
+
+        function exe002() {
+            const filme = {
+                titulo: "Kill Bill",
+                ano: "2003",
+                diretor: "Quentin Tarantino"
+            }
+            console.log(`O filme ${filme.titulo}, dirigido por ${filme.diretor}, foi lançado em ${filme.ano}`)
+            filme.personagens = ["Bill", "The Bride", "Nikkie"];
+            console.log(filme);
+            console.log(filme.personagens[0]);
+            console.log(filme);
+        }
+
+
+        exe002();
+
+    </script>
+</body>
+
+</html>

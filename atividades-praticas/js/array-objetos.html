@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos Arrays e Objetos</title>
+</head>
+
+<body>
+    <p>F12 para exibir</p>
+    <script>
+        // ARRAYS [] E OBJETOS {}
+        // ARRAY => INDICE 1, 2, 3
+        // OBJETOS => {CHAVE : VALOR}
+
+        // ARRAY
+        const frutas = ["Maçã", "Banana", "Laranja", "Uva", "Pera"];
+        console.log(frutas);
+
+        // VERIFICAR QTD ITENS
+        console.log(frutas.length);
+
+        // EXIBIR PRIMEIRO E ULTIMO ITEM
+        console.log(frutas[0], frutas[frutas.length - 1]);
+
+        // INSERIR
+
+        frutas.push("Jaca");
+
+        console.log(frutas);
+
+        frutas.unshift("Abacaxi");
+        console.log(frutas);
+
+        // ALTERAR ITENS
+        frutas[0] = "Morango";
+        console.log(frutas);
+
+        // EXCLUIR ITENS
+        frutas.pop();
+        console.log(frutas);
+
+        // EXCLUI O PRIMEIRO ITEM
+        frutas.shift();
+        console.log(frutas);
+
+        delete frutas[1];
+        console.log(frutas);
+
+        // INSERIR E EXCLUIR
+        frutas.splice(1, 2, "Limão");
+        console.log(frutas);
+
+        frutas.splice(1, 1);
+        console.log(frutas);
+
+        // OBJETOS
+        const pessoa = {
+            nome: "Jessé",
+            idade: 22,
+            altura: 1.78,
+            amigos: ["Pedro", "Maria"]
+        };
+        console.log(pessoa);
+        console.log(pessoa.nome);
+        console.log(pessoa["nome"]);
+        console.log(pessoa.amigos['0']);
+        pessoa.cidade = "Presidente Prudente";
+        console.log(pessoa);
+        pessoa.cidade = "Regente";
+        console.log(pessoa);
+
+        // EXCLUIR
+        delete pessoa.cidade;
+        console.log(pessoa);
+    </script>
+</body>
+
+</html>
