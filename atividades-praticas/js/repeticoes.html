@@ -19,23 +19,23 @@
         ];
 
         // for (variavel, condicao, incremento)
-        for (let i = 0; i <= 10; i++){
+        for (let i = 0; i <= 10; i++) {
             console.log(i)
         }
 
-        for (let i = 0; i < alunos.length; i++){
+        for (let i = 0; i < alunos.length; i++) {
             console.log(alunos[i]);
         }
 
         let x = 1;
 
-        while (x <= 10){
+        while (x <= 10) {
             console.log(x);
             x++;
-            if (x === 4){
+            if (x === 4) {
                 continue;
             }
-            if (x === 5){
+            if (x === 5) {
                 break;
             }
         }
@@ -45,23 +45,42 @@
         //     x++;
         // } while(x <= 10);
 
-        nome.forEach(function(nome) {
+        nome.forEach(function (nome) {
             console.log(nome);
         });
-        alunos.forEach(function(aluno){
+        alunos.forEach(function (aluno) {
             console.log(aluno.nota);
         });
 
         // MAP
         const novoArray = [];
-        for (let i = 0; i < numeros.length; i++){
-            novoArray.push(numeros[i]*2);
+        for (let i = 0; i < numeros.length; i++) {
+            novoArray.push(numeros[i] * 2);
         }
         console.log(novoArray);
 
-        const novoArray2 = numeros.map(function(numero){
+        const novoArray2 = numeros.map(function (numero) {
             return numero * 2;
-        })
+        });
+
+        const novoArray3 = numeros.map(numero => numero * 2);
+        console.log(novoArray3);
+
+        const alunosNovaNota = alunos.map(aluno => {
+            return {
+                nome: aluno.nome,
+                nota: aluno.nota * 0.9
+            }
+        });
+        console.log(alunosNovaNota);
+
+        // filter
+        const arrayNumeros = [2,3,4,5,6];
+        const numerosPares = arrayNumeros.filter(numero => numero % 2 === 0);
+        console.log(numerosPares);
+
+        const alunosAprovados = alunosNovaNota.filter(aluno => aluno.nota >= 8);
+        console.log(alunosAprovados);
     </script>
 </body>
 
