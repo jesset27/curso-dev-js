@@ -22,11 +22,13 @@ const inputCidade = document.querySelector("#user-cidade");
 const inputEstado = document.querySelector("#user-estado");
 const inputObs = document.querySelector("#user-obs");
 const form = document.querySelector("#user-form");
+const tabelaCorpo = document.querySelector("#user-table-body");
 
 
 function mostrarTelaLista() {
     telaLista.classList.remove('d-none');
     telaCadastro.classList.add('d-none');
+    renderizarTabela();
 }
 
 function mostrarTelaCadastro() {
@@ -34,7 +36,7 @@ function mostrarTelaCadastro() {
     telaCadastro.classList.remove('d-none');
 }
 
-function salvarUsuario(){
+function salvarUsuario() {
     const id = Number(inputId.value);
     const nome = inputNome.value;
     const sobrenome = inputSobrenome.value;
@@ -54,30 +56,51 @@ function salvarUsuario(){
     usuarios.push(usuario);
     salvarStorage();
 }
-function salvarStorage(){
+function salvarStorage() {
     localStorage.setItem("cadastro_usuarios", JSON.stringify(usuarios));
 }
 salvarStorage()
 
-function renderizarTabela(){
+function renderizarTabela() {
     tabelaCorpo.innerHTML = "";
-    usuarios.forEach(user =>{
+    usuarios.forEach(user => {
         const tr = document.createElement("tr");
         tr.innerHTML = `
-            <td>Nome</td>
-            <td>Sobrenome</td>
-            <td>Email</td>
+            <td>${user.nome}</td>
+            <td>${user.sobrenome}</td>
+            <td>${user.email}</td>
             <td>
-                botão editar cor laranja
-                botao excluir cor vermelha
+                <button type="button" class="btn btn-warning btn-sm" data-id="${user.id}">Editar</button>
+                <button type="button" class="btn btn-danger btn-sm" data-id="${user.id}">Excluir</button>
             </td>
         `;
+        tabelaCorpo.appendChild(tr);
     })
+}
+
+function excluirUsuario(id){
+    if (confirm("Deseja realmente excluir esse usuario?")){
+        usuarios = usuarios.filter(user => user.id !== id);
+        salvarStorage();
+        renderizarTabela();
+    }
 }
 
 function inicializar() {
     btnAdicionar.addEventListener('click', mostrarTelaCadastro);
     btnVoltarLista.addEventListener('click', mostrarTelaLista);
     form.addEventListener('submit', salvarUsuario);
+    mostrarTelaLista();
+    tabelaCorpo.addEventListener('click', (event) =>{
+        const target = event.target.closest("button");
+        if (!target) return
+        const id = Number(target.dataset.id);
+        if (isNaN(id)) return
+        if (target.classList.contains("btn-warning")){
+            editarUsuario(id);
+        }else if (target.classList.contains("btn-danger")){
+            excluirUsuario(id);
+        }
+    })
 }
 inicializar();
